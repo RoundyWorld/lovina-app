@@ -33,6 +33,7 @@ function Resume() {
                 <ul>
                     <li><a href="https://www.linkedin.com/in/lovina-roundy/" target="_blank" rel="noopener noreferrer">Lovina's LinkedIn</a></li>
                     <li><a href="https://github.com/LovinaRoundy" target="_blank" rel="noopener noreferrer">Lovina's Github</a></li>
+                    <li><a href="https://github.com/RoundyWorld" target="_blank" rel="noopener noreferrer">RoundyWorld's Github</a></li>
                 </ul>
                 </header>
             </div>

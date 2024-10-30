@@ -25,10 +25,7 @@
     padding: .4em 1.5em;
     flex: 15em;
     display: flex;
-
-    /* text-align: center; */
     align-items: center;
-    justify-content: center;
   }
   
   .flex-right {
