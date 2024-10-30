@@ -1,14 +1,19 @@
-body {
+.resume {
     box-sizing: border-box;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     font-family: 'Consolas','BitstreamVeraSansMono','CourierNew',Courier,monospace;
     max-width: 85em;
     margin: auto;
+    text-align: left;
+  }
+
+  h1,h2{
+    text-align: center;
   }
 
   li{
-    font-size: 0.75em;
+    font-size: 0.85em;
   }
   
   .flex-container {
@@ -19,25 +24,19 @@ body {
   .flex-left {
     padding: .4em 1.5em;
     flex: 15em;
-    text-align: center;
+    display: flex;
+
+    /* text-align: center; */
+    align-items: center;
+    justify-content: center;
   }
   
   .flex-right {
     padding: .4em 1.5em;
     flex: 50%;
+    align-items: center;
   }
 
   .container {
     padding: .6em 1.5em;
-  }
-
-  .ascii {
-    color: white;
-    background: black;
-	display:inline-block;
-	white-space:pre;
-	letter-spacing:0;
-	line-height:1.4;
-	font-family:'Consolas','BitstreamVeraSansMono','CourierNew',Courier,monospace;
-	font-size:4px;
   }

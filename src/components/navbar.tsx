@@ -8,15 +8,19 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Flare from '@mui/icons-material/Flare';
-import lovina from '../assets/lovina.png';
+import snake from '../assets/snake.png';
+import { NavLink } from 'react-router-dom';
 
-const pages = ['Resume', 'Games', 'Hobbies'];
 
-function ResponsiveAppBar() {
+interface ResponsiveAppBarProps {
+  pages: string[];
+  selectedPage: string;
+  setSelectedPage: (page: string) => void;
+}
+
+function ResponsiveAppBar({ pages, selectedPage, setSelectedPage }: ResponsiveAppBarProps) {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -28,7 +32,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed" sx={{ backgroundColor: 'darkblue'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Flare sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -36,7 +40,6 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component="a"
-            href="#home"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -78,9 +81,23 @@ function ResponsiveAppBar() {
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <NavLink 
+                  to={page} 
+                  key={page}
+                  style={{ 
+                    color: 'black', 
+                    display: 'block', 
+                    textDecoration: 'none',
+                    textTransform: 'capitalize',
+                    backgroundColor: selectedPage === page ? 'rgba(211, 211, 211, 0.25)' : 'inherit' 
+                    }}
+                >
+                <MenuItem 
+                  onClick={() => { handleCloseNavMenu(); setSelectedPage(page); }}
+                >
                   <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
                 </MenuItem>
+                </NavLink>
               ))}
             </Menu>
           </Box>
@@ -89,7 +106,6 @@ function ResponsiveAppBar() {
             variant="h5"
             noWrap
             component="a"
-            href="#home"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -105,17 +121,25 @@ function ResponsiveAppBar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
+              <NavLink 
                 key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                to={page}
+                style={{ 
+                  padding: '1rem',
+                  color: 'white', 
+                  display: 'block', 
+                  textDecoration: 'none',
+                  textTransform: 'uppercase',
+                  backgroundColor: selectedPage === page ? 'rgba(211, 211, 211, 0.25)' : 'inherit' 
+                  }}
+                onClick={() => { handleCloseNavMenu(); setSelectedPage(page); }}
               >
-                {page}
-              </Button>
+                  {page}
+              </NavLink>
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
-            <Avatar alt="Lovina Roundy" src={lovina} />
+            <Avatar alt="Python" src={snake} />
           </Box>
         </Toolbar>
       </Container>
