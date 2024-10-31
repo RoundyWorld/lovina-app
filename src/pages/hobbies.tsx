@@ -10,6 +10,7 @@ const Hobbies: React.FC = () => {
                 <li>Biking</li>
                 <li>Hiking</li>
                 <li>Running Slowly</li>
+                <li>Playing with my dog</li>
             </ul>
         </div>
     );
