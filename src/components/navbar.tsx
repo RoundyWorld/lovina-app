@@ -14,13 +14,14 @@ import snake from '../assets/snake.png';
 import { NavLink } from 'react-router-dom';
 
 
-interface ResponsiveAppBarProps {
+interface NavBarProps {
   pages: string[];
   selectedPage: string;
   setSelectedPage: (page: string) => void;
 }
 
-function ResponsiveAppBar({ pages, selectedPage, setSelectedPage }: ResponsiveAppBarProps) {
+export default function NavBar({ pages, selectedPage, setSelectedPage }: NavBarProps) {
+
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -32,8 +33,16 @@ function ResponsiveAppBar({ pages, selectedPage, setSelectedPage }: ResponsiveAp
   };
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: 'darkblue'}}>
-      <Container maxWidth="xl">
+    <AppBar 
+      position="fixed" 
+      sx={{
+        backgroundColor: 'rgba(1,1,122,0.6)',
+        backdropFilter: 'blur(24px)',
+        boxShadow: 0,
+        backgroundImage: 'none',
+      }}
+    >
+      <Container maxWidth="lg">
         <Toolbar disableGutters>
           <Flare sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
@@ -146,4 +155,3 @@ function ResponsiveAppBar({ pages, selectedPage, setSelectedPage }: ResponsiveAp
     </AppBar>
   );
 }
-export default ResponsiveAppBar;

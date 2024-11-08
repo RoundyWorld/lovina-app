@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
-import ResponsiveAppBar from './components/navbar';
+import NavBar from './components/NavBar';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Footer from './components/Footer';
 
 
 import Resume from './pages/resume';
@@ -16,7 +17,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <header className="App-header">
-          <ResponsiveAppBar 
+          <NavBar 
             pages={pages}
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
@@ -31,6 +32,7 @@ function App() {
             <Route path="/hobbies" element={<Hobbies />} />
           </Routes>
         </div>
+        <Footer />
       </div>
     </BrowserRouter>
   );
