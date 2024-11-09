@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import NavBar from './components/NavBar';
+import AppNavBar from './components/AppNavBar';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Footer from './components/Footer';
 
@@ -17,7 +17,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <header className="App-header">
-          <NavBar 
+          <AppNavBar 
             pages={pages}
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}

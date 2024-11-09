@@ -14,13 +14,13 @@ import snake from '../assets/snake.png';
 import { NavLink } from 'react-router-dom';
 
 
-interface NavBarProps {
+interface AppNavBarProps {
   pages: string[];
   selectedPage: string;
   setSelectedPage: (page: string) => void;
 }
 
-export default function NavBar({ pages, selectedPage, setSelectedPage }: NavBarProps) {
+export default function AppNavBar({ pages, selectedPage, setSelectedPage }: AppNavBarProps) {
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
