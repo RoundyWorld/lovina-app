@@ -53,11 +53,11 @@ export default function AccordianSet({sectionTitle, content}: AccordianSetProps)
         {sectionTitle}
       </Typography>
       <Box sx={{ width: '100%' , textAlign: 'left'}}>
-        {content.map((item) => (
+        {content.map((item, index) => (
           <Accordion
-            key={item.title+item.company}
-            expanded={expanded === item.title}
-            onChange={handleChange(item.title)}
+            key={item.title+index}
+            expanded={expanded === item.title+index}
+            onChange={handleChange(item.title+index)}
           >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
