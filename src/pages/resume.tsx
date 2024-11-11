@@ -38,7 +38,7 @@ const jobHistory = [
             "Worked with 2 other engineers and a small legal team to create software to automate criminal record clearance for Utah and Arizona.",
             "Led effort to unify, clean, and store data across different cloud SaaS systems.",
             "Supported intern project work to type over 150K legal documents using custom-built AI tools.",
-            "Assisted over 460 people to clear over 1400 criminal records so those individuals could continue moving forward without shame and improving their lives.",
+            "Helped over 460 people to clear over 1400 criminal records so those individuals could continue moving forward without shame and improving their lives.",
         ]
     },
     {

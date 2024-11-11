@@ -15,7 +15,7 @@ export default function Hero({title, subtitle}: AccordianSetProps) {
       id="hero"
       sx={{
         width: '100%',
-        backgroundImage:'radial-gradient(ellipse 80% 100% at 50% -20%, hsl(210, 100%, 90%), transparent)',
+        backgroundImage:'radial-gradient(ellipse 80% 100% at 50% -15%, hsl(210, 100%, 80%), transparent)',
       }}
     >
       <Container
@@ -23,7 +23,7 @@ export default function Hero({title, subtitle}: AccordianSetProps) {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          pt: { xs: 12, sm: 18 },
+          pt: { xs: 18, sm: 24 },
           pb: { xs: 4, sm: 8 },
         }}
       >

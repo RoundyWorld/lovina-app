@@ -56,7 +56,7 @@ export default function Footer() {
           <IconButton
             color="inherit"
             size="small"
-            href="https://github.com/RoundyWorld"
+            href="https://github.com/LovinaRoundy"
             aria-label="GitHub"
             sx={{ alignSelf: 'center' }}
           >
