@@ -94,12 +94,15 @@ export default function AppNavBar({ pages, selectedPage, setSelectedPage }: AppN
                   to={page} 
                   key={page}
                   style={{ 
+                    paddingLeft: '1rem',
+                    minWidth: '25rem',
+                    maxWidth: '100vw',
                     color: 'black', 
                     display: 'block', 
                     textDecoration: 'none',
                     textTransform: 'capitalize',
                     backgroundColor: selectedPage === page ? 'rgba(211, 211, 211, 0.25)' : 'inherit' 
-                    }}
+                  }}
                 >
                 <MenuItem 
                   onClick={() => { handleCloseNavMenu(); setSelectedPage(page); }}

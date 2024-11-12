@@ -15,7 +15,7 @@ function App() {
   const [selectedPage, setSelectedPage] = useState(pages[0]);
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <header className="App-header">
           <AppNavBar 
             pages={pages}
@@ -23,7 +23,7 @@ function App() {
             setSelectedPage={setSelectedPage}
           />
         </header>
-        <div>
+        <div style={{ flex: 1 }}>
           <Routes>
             <Route path="/" element={<Resume />} />
             <Route path="*" element={<Resume />} />
